@@ -392,7 +392,26 @@ document.querySelector('.btn-primary').addEventListener('click', () => {
           <div class="row gy-4 gx-5">
               <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="200">
                   <img src="https://img.freepik.com/free-photo/female-doctor-hospital_23-2148827757.jpg" class="img-fluid" alt="">
-                  <a href="https://youtu.be/MPYfHdgSmlo" class="glightbox pulsating-play-btn"></a>
+                  <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/MPYfHdgSmlo?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+           <style>
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
               </div>
               <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
                   <h3 dir="rtl">نبذة عنا</h3>
