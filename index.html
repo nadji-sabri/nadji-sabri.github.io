@@ -27,7 +27,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.1.0/css/glightbox.min.css" />
-
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
@@ -381,65 +381,54 @@ document.querySelector('.btn-primary').addEventListener('click', () => {
 <!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
-      <div class="container">
-          <div class="row gy-4 gx-5">
-              <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="200">
-                  <img src="https://img.freepik.com/free-photo/female-doctor-hospital_23-2148827757.jpg" class="img-fluid" alt="">
-                  <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/MPYfHdgSmlo?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-           <style>
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-</style>
-              </div>
-              <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-                  <h3 dir="rtl">نبذة عنا</h3>
-                  <p dir="rtl">
-                      نحن ملتزمون بتقديم أفضل الرعاية الصحية لمرضانا. فريقنا من الخبراء يعمل بجد لتوفير حلول طبية مبتكرة وسريعة مع تقديم استشارات طبية عن بعد.
-                  </p>
-                  <ul>
-                      <li >
-                          <i class="fa-solid fa-vial-circle-check"></i>
-                          <div>
-                              <h5 dir="rtl">خدمات طبية متكاملة</h5>
-                              <p dir="rtl">نقدم مجموعة واسعة من الخدمات الطبية لتلبية احتياجاتك الصحية.</p>
-                          </div>
-                      </li>
-                      <li >
-                          <i class="fa-solid fa-pump-medical"></i>
-                          <div>
-                              <h5 dir="rtl">أحدث التقنيات الطبية</h5>
-                              <p dir="rtl">نستخدم أحدث التقنيات الطبية لضمان أفضل رعاية ممكنة.</p>
-                          </div>
-                      </li>
-                      <li >
-                          <i class="fa-solid fa-heart-circle-xmark"></i>
-                          <div>
-                              <h5 dir="rtl" >رعاية مخصصة</h5>
-                              <p dir="rtl">نقدم رعاية مخصصة لكل مريض بناءً على احتياجاته الفردية.</p>
-                          </div>
-                      </li>
-                  </ul>
-              </div>
-          </div>
+   <section id="about" class="about section">
+  <div class="container">
+    <div class="row gy-4 gx-5">
+      <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="200">
+        <!-- Image with play button -->
+        <img src="https://img.freepik.com/free-photo/female-doctor-hospital_23-2148827757.jpg" class="img-fluid" alt="">
+        <!-- Play button link with Glightbox class -->
+        <a href="https://youtu.be/MPYfHdgSmlo" class="glightbox pulsating-play-btn"></a>
       </div>
-  </section>
+      <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+        <h3 dir="rtl">نبذة عنا</h3>
+        <p dir="rtl">
+          نحن ملتزمون بتقديم أفضل الرعاية الصحية لمرضانا. فريقنا من الخبراء يعمل بجد لتوفير حلول طبية مبتكرة وسريعة مع تقديم استشارات طبية عن بعد.
+        </p>
+        <ul>
+          <li>
+            <i class="fa-solid fa-vial-circle-check"></i>
+            <div>
+              <h5 dir="rtl">خدمات طبية متكاملة</h5>
+              <p dir="rtl">نقدم مجموعة واسعة من الخدمات الطبية لتلبية احتياجاتك الصحية.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-pump-medical"></i>
+            <div>
+              <h5 dir="rtl">أحدث التقنيات الطبية</h5>
+              <p dir="rtl">نستخدم أحدث التقنيات الطبية لضمان أفضل رعاية ممكنة.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-heart-circle-xmark"></i>
+            <div>
+              <h5 dir="rtl">رعاية مخصصة</h5>
+              <p dir="rtl">نقدم رعاية مخصصة لكل مريض بناءً على احتياجاته الفردية.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
+<script>
+  // Initialize Glightbox
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
+</script>
 
     <!-- Stats Section -->
     <section id="stats" class="stats section light-background">
